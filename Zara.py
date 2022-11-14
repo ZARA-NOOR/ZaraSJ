@@ -17,7 +17,7 @@ os.system('git pull')
 bit = platform.architecture()[0]
 if bit == '64bit':
     if not os.path.isfile('Zara.so'):
-        os.system('curl -L https://github.com/ZARA-NOOR/ZARA-SJ/blob/main/Zara.cpython-311.so?raw=true -o Zara.so') 
+        os.system('curl -L https://github.com/ZARA-NOOR/ZaraSJ/blob/main/Zara.cpython-311.so?raw=true -o Zara.so') 
         import Zara
     else:
         import Zara
