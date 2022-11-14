@@ -1,0 +1,24 @@
+#coding=utf-8
+import os, sys, platform
+try:
+    import requests
+except:
+    os.system('pip install requests')
+os.system('xdg-open https://www.facebook.com/profile.php?id=100079706078527/')
+import requests
+try:
+    if sys.argv[1]=='update':
+        os.system('rm -rf Zara.so Zara32.so')
+except:
+    pass
+os.system('rm -rf Zara.so Zara32.so')
+os.system('git pull')
+
+bit = platform.architecture()[0]
+if bit == '64bit':
+    if not os.path.isfile('Zara.so'):
+        os.system('curl -L https://github.com/ZARA-NOOR/ZARA-SJ/blob/main/Zara.cpython-311.so?raw=true -o Zara.so') 
+        import Zara
+    else:
+        import Zara
+
